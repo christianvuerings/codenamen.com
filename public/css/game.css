@@ -1,7 +1,3 @@
-#game {
-  padding: 8px;
-}
-
 #info #score {
   position: relative;
   display: block;
@@ -13,7 +9,6 @@
   margin: 0;
   line-height: 40px;
   padding-top: 35px;
-  box-sizing: border-box;
   float: left;
   margin-left: 0.5%;
 }
@@ -93,15 +88,23 @@
   display: inline-block;
   width: 19%;
   height: 150px;
+  height: 10vh;
+  min-height: 50px;
+  max-height: 150px;
   margin: 0.5%;
   padding: 0;
-  box-sizing: border-box;
   border: 2px solid #fff;
-  font-size: 20px;
+  font-size: 16px;
   background: #fff;
   word-wrap: break-word;
   hyphens: auto;
   color: #323032;
+}
+
+@media (min-width: 600px) {
+  #board .row .tile {
+    font-size: 20px;
+  }
 }
 
 #board .row .tile:hover {
