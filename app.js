@@ -1,5 +1,3 @@
-////////////////////////////////////////////////////////////////////////////
-
 // Express
 let express = require("express");
 
@@ -547,7 +545,7 @@ function herokuRestart() {
     });
     SOCKET_LIST[socket].emit("leaveResponse", { success: true });
   }
-  heroku.delete("/apps/codenames-plus/dynos/").then((app) => {});
+  heroku.delete("/apps/codenamen/dynos/").then((app) => {});
 }
 
 // Warn users of restart
