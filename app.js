@@ -271,21 +271,21 @@ function createRoom(socket, data) {
     // Tell the client the room arleady exists
     socket.emit("createResponse", {
       success: false,
-      msg: "Room Already Exists",
+      msg: "Kamer bestaat al",
     });
   } else {
     if (roomName === "") {
       // Tell the client they need a valid room name
       socket.emit("createResponse", {
         success: false,
-        msg: "Enter A Valid Room Name",
+        msg: "Vul een kamer in",
       });
     } else {
       if (userName === "") {
         // Tell the client they need a valid nickname
         socket.emit("createResponse", {
           success: false,
-          msg: "Enter A Valid Nickname",
+          msg: "Vul een bijnaam in",
         });
       } else {
         // If the room name and nickname are both valid, proceed
@@ -320,20 +320,20 @@ function joinRoom(socket, data) {
 
   if (!ROOM_LIST[roomName]) {
     // Tell client the room doesnt exist
-    socket.emit("joinResponse", { success: false, msg: "Room Not Found" });
+    socket.emit("joinResponse", { success: false, msg: "Kamer niet gevonden" });
   } else {
     if (ROOM_LIST[roomName].password !== pass) {
       // Tell client the password is incorrect
       socket.emit("joinResponse", {
         success: false,
-        msg: "Incorrect Password",
+        msg: "Incorrect Wachtwoord",
       });
     } else {
       if (userName === "") {
         // Tell client they need a valid nickname
         socket.emit("joinResponse", {
           success: false,
-          msg: "Enter A Valid Nickname",
+          msg: "Vul een bijnaam in",
         });
       } else {
         // If the room exists and the password / nickname are valid, proceed

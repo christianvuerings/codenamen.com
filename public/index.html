@@ -19,11 +19,11 @@
 
 <body>
   <span id="server-stats" style="display: none"></span>
-  <button id="about-button"class="above">About</button>
+  <button id="about-button"class="above">Info</button>
   <div id = "about-window" style="display:none"class="above">
     <div>
       <h2>Codenamen.com door Christian Vuerings</h3>
-			<div>Vernederlandste versie van <a target="_blank" href="https://codenames.plus">Codenames.plus</a> gemaakt door <a target="_blank" href="https://twitter.com/J0ooop">@j0ooop</a><div>
+			<div>Vernederlandste versie van <a target="_blank" href="https://codenames.plus">Codenames.plus</a> gemaakt door <a target="_blank" href="https://twitter.com/J0ooop">@j0ooop</a></div>
       <br>
     </div>
     <h3>How To Play</h4>
@@ -57,7 +57,7 @@
         <input id="join-nickname" type="text" maxlength="10"></input>
       </div>
       <div class="join-input">
-        <label for="join-room">Room: </label>
+        <label for="join-room">Kamer: </label>
         <input id="join-room" type="text" maxlength="10"></input>
       </div>
       <div class="join-input">
@@ -77,7 +77,7 @@
     <div id="content">
       <div id="left">
           <div id="players">
-            <h2>Players</h2>
+            <h2>Spelers</h2>
             <div id="panel">
               <button id="join-red">Join Rood</button>
               <button id="join-blue">Join Blauw</button>
@@ -89,11 +89,13 @@
           </div>
           <div id="card-packs">
             <h2>Kaartpakketten</h2>
-            <p id="word-pool">Word Pool</p>
-            <button class="enabled" id="base-pack">Basis Packet</button>
-            {# <button id="duet-pack">Duet Pack</button>
-            <button id="undercover-pack">Undercover Pack (NSFW)</button>
-            <button id="nlss-pack">NLSS Pack</button> #}
+            <p id="word-pool">Aantal Woorden</p>
+						<div class="visuallyHidden">
+							<button class="enabled" id="base-pack">Basis Packet</button>
+							<button id="duet-pack">Duet Pack</button>
+							<button id="undercover-pack">Undercover Pack (NSFW)</button>
+							<button id="nlss-pack">NLSS Pack</button>
+						</div>
           </div>
           <div id="controls">
               <label id="timer-slider-label" for="timer">Timer Lengte</label>

@@ -1,8 +1,7 @@
-
 #info #score {
   position: relative;
   display: block;
-  color: #F8FDFF;
+  color: #f8fdff;
   font-size: 40px;
   font-weight: bold;
   width: 33%;
@@ -16,11 +15,11 @@
 }
 
 #info #score #score-red {
-  color: #B32728;
+  color: #b32728;
 }
 
 #info #score #score-blue {
-  color: #11779F;
+  color: #11779f;
 }
 
 #info #turn {
@@ -31,16 +30,16 @@
   margin: 0;
   font-size: 35px;
   text-align: center;
-  color: #F8FDFF;
+  color: #f8fdff;
   float: left;
 }
 
 #info .red {
-  color: #B32728 !important;
+  color: #b32728 !important;
 }
 
 #info .blue {
-  color: #11779F !important;
+  color: #11779f !important;
 }
 
 #info #end-turn {
@@ -53,8 +52,8 @@
   width: 19%;
   font-size: 16px;
   background: #323032;
-  border: 2px solid #F8FDFF;
-  color: #F8FDFF;
+  border: 2px solid #f8fdff;
+  color: #f8fdff;
   text-decoration: none;
 }
 
@@ -79,12 +78,13 @@
 
 #board .row {
   position: relative;
+  display: flex;
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-#board .row .tile{
+#board .row .tile {
   position: relative;
   display: inline-block;
   width: 19%;
@@ -92,13 +92,13 @@
   margin: 0.5%;
   padding: 0;
   box-sizing: border-box;
-  border: 2px solid #F8FDFF;
+  border: 2px solid #f8fdff;
   font-size: 25px;
-  background: #F8FDFF;
+  background: #f8fdff;
   color: #323032;
 }
 
-#board .row .tile:hover{
+#board .row .tile:hover {
   border-color: #323032;
 }
 
@@ -107,13 +107,13 @@
 }
 
 #board .s.r {
-  color: #B32728;
+  color: #b32728;
   background: rgb(236, 170, 170);
   border-color: rgb(236, 170, 170);
 }
 
 #board .s.b {
-  color: #11779F;
+  color: #11779f;
   background: rgb(168, 216, 235);
   border-color: rgb(168, 216, 235);
 }
@@ -124,8 +124,8 @@
 }
 
 #board .s.d.h {
-  background: #F8FDFF;
-  border-color: #F8FDFF;
+  background: #f8fdff;
+  border-color: #f8fdff;
 }
 
 #board .s.d.h:hover {
@@ -135,27 +135,26 @@
 #board .flipped.n {
   background: rgb(211, 191, 175) !important;
   border-color: rgb(211, 191, 175);
-  color: #F8FDFF;
+  color: #f8fdff;
 }
 
 #board .flipped.r {
-  border-color: #B32728;
-  background: #B32728;
-  color: #F8FDFF;
+  border-color: #b32728;
+  background: #b32728;
+  color: #f8fdff;
 }
 
 #board .flipped.b {
-  border-color: #11779F;
-  background: #11779F;
-  color: #F8FDFF;
+  border-color: #11779f;
+  background: #11779f;
+  color: #f8fdff;
 }
 
 #board .flipped.d {
   border-color: #000000;
   background: #000000;
-  color: #F8FDFF;
+  color: #f8fdff;
 }
-
 
 #toggles {
   position: relative;
@@ -179,8 +178,8 @@
   margin: 0.5%;
   font-size: 16px;
   background: #323032;
-  border: 2px solid #F8FDFF;
-  color: #F8FDFF;
+  border: 2px solid #f8fdff;
+  color: #f8fdff;
   text-decoration: none;
 }
 
@@ -205,14 +204,14 @@
 #toggles .toggle button:disabled {
   background: #323032;
   border: 2px solid #686c6d;
-  color: #F8FDFF;
+  color: #f8fdff;
   cursor: default;
   text-decoration: underline;
 }
 
 #toggles .toggle button:disabled:hover {
   background: #323032;
-  color: #F8FDFF;
+  color: #f8fdff;
 }
 
 #toggles #player-difficulty {

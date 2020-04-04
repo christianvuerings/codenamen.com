@@ -10,6 +10,10 @@ Grey: #D6D2C9
 
 */
 
+.visuallyHidden {
+  display: none;
+}
+
 @media (max-width: 1600px) {
   #board .row .tile {
     height: 90px !important;
