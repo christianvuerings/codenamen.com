@@ -1,7 +1,11 @@
+#game {
+  padding: 8px;
+}
+
 #info #score {
   position: relative;
   display: block;
-  color: #f8fdff;
+  color: #fff;
   font-size: 40px;
   font-weight: bold;
   width: 33%;
@@ -30,7 +34,7 @@
   margin: 0;
   font-size: 35px;
   text-align: center;
-  color: #f8fdff;
+  color: #fff;
   float: left;
 }
 
@@ -51,18 +55,18 @@
   right: 0;
   width: 19%;
   font-size: 16px;
-  background: #323032;
-  border: 2px solid #f8fdff;
-  color: #f8fdff;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
   text-decoration: none;
 }
 
 #info #end-turn:hover {
-  background: #686c6d;
+  background: rbga(255, 255, 255, 0.2);
 }
 
 #info #end-turn:disabled {
-  background: #323032;
+  background: transparent;
   border: 2px solid #686c6d;
   color: #686c6d;
   cursor: default;
@@ -92,9 +96,11 @@
   margin: 0.5%;
   padding: 0;
   box-sizing: border-box;
-  border: 2px solid #f8fdff;
-  font-size: 25px;
-  background: #f8fdff;
+  border: 2px solid #fff;
+  font-size: 20px;
+  background: #fff;
+  word-wrap: break-word;
+  hyphens: auto;
   color: #323032;
 }
 
@@ -124,8 +130,8 @@
 }
 
 #board .s.d.h {
-  background: #f8fdff;
-  border-color: #f8fdff;
+  background: #fff;
+  border-color: #fff;
 }
 
 #board .s.d.h:hover {
@@ -135,25 +141,25 @@
 #board .flipped.n {
   background: rgb(211, 191, 175) !important;
   border-color: rgb(211, 191, 175);
-  color: #f8fdff;
+  color: #fff;
 }
 
 #board .flipped.r {
   border-color: #b32728;
   background: #b32728;
-  color: #f8fdff;
+  color: #fff;
 }
 
 #board .flipped.b {
   border-color: #11779f;
   background: #11779f;
-  color: #f8fdff;
+  color: #fff;
 }
 
 #board .flipped.d {
   border-color: #000000;
   background: #000000;
-  color: #f8fdff;
+  color: #fff;
 }
 
 #toggles {
@@ -164,54 +170,53 @@
 }
 
 #toggles .toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
   position: relative;
-  width: 19%;
   float: left;
   margin: 0.5%;
 }
 
 #toggles #new-game {
   position: relative;
-  width: 19%;
   right: 0;
   float: right;
   margin: 0.5%;
   font-size: 16px;
-  background: #323032;
-  border: 2px solid #f8fdff;
-  color: #f8fdff;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
   text-decoration: none;
 }
 
 #toggles #new-game:hover {
-  background: #686c6d;
+  background: rbga(255, 255, 255, 0.2);
 }
 
 #toggles .toggle button {
-  width: 50%;
   margin: 0;
   font-size: 16px;
-  background: #686c6d;
-  border: 2px solid #686c6d;
-  color: #323032;
+  background: transparent;
+  border: 2px solid transparent;
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
 
 #toggles .toggle button:hover {
-  background: rgb(139, 139, 139);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 #toggles .toggle button:disabled {
-  background: #323032;
-  border: 2px solid #686c6d;
-  color: #f8fdff;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
   cursor: default;
   text-decoration: underline;
 }
 
 #toggles .toggle button:disabled:hover {
-  background: #323032;
-  color: #f8fdff;
+  color: #fff;
 }
 
 #toggles #player-difficulty {

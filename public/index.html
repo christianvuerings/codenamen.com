@@ -1,3 +1,4 @@
+<html lang="nl">
 <head>
   <title>Codenamen.com</title>
   <!--meta-->
@@ -14,6 +15,7 @@
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/game.css">
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Changa:300" rel="stylesheet">
 </head>
 
@@ -23,7 +25,7 @@
   <div id = "about-window" style="display:none"class="above">
     <div>
       <h2>Codenamen.com door Christian Vuerings</h3>
-			<div>Vernederlandste versie van <a target="_blank" href="https://codenames.plus">Codenames.plus</a> gemaakt door <a target="_blank" href="https://twitter.com/J0ooop">@j0ooop</a></div>
+			<div class="center">Vernederlandste &amp; aangepaste versie van <a target="_blank" href="https://codenames.plus">Codenames.plus</a> door <a target="_blank" href="https://twitter.com/J0ooop">@j0ooop</a></div>
       <br>
     </div>
     <h3>How To Play</h4>
@@ -51,36 +53,40 @@
   <div id="overlay"> </div>
   <div id="join-game">
     <h1>Codenamen.com</h1>
-    <form>
+    <form class="join-form">
       <div class="join-input">
-        <label for="join-nickname">Bijnaam: </label>
+        <label for="join-nickname">Bijnaam</label>
         <input id="join-nickname" type="text" maxlength="10"></input>
       </div>
       <div class="join-input">
-        <label for="join-room">Kamer: </label>
+        <label for="join-room">Kamer</label>
         <input id="join-room" type="text" maxlength="10"></input>
       </div>
       <div class="join-input">
-        <label for="join-password">Wachtwoord: </label>
+        <label for="join-password">Wachtwoord</label>
         <input id="join-password" type="password" maxlength="20"></input>
       </div>
     </form>
     <p id="error-message"> </p>
-    <button id="join-enter">Kamer Binnengaan</button>
-    <button id="join-create">Kamer Maken</button>
+		<div class="join-buttons">
+			<button id="join-enter">Kamer Binnengaan</button>
+			<button id="join-create">Kamer Maken</button>
+		</div>
   </div>
   <div id="game" style="display:none">
     <button id="leave-room">Kamer Verlaten</button>
     <div id="title">
-        <h1>Codenames</h1>
+        <h1>Codenamen</h1>
     </div>
     <div id="content">
       <div id="left">
           <div id="players">
             <h2>Spelers</h2>
             <div id="panel">
-              <button id="join-red">Join Rood</button>
-              <button id="join-blue">Join Blauw</button>
+							<div class="join-colors-buttons">
+								<button id="join-red">Join Rood</button>
+								<button id="join-blue">Join Blauw</button>
+							</div>
               <ul id="red-team"></ul>
               <ul id="blue-team"></ul>
               <ul id="undefined-list"></ul>
@@ -161,9 +167,8 @@
           <button id="new-game">Nieuw Spel</button>
         </div>
       </div>
-      <div id="space"></div>
     </div>
   </div>
 </body>
 <script language="javascript" type="text/javascript" src="js/codenames.js"></script>
-
+</html>

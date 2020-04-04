@@ -5,206 +5,29 @@ Black: #323032
 Light-Black: #686c6d
 Blue: #11779F
 Red: #B32728
-White: #F8FDFF
+White: #fff
 Grey: #D6D2C9
 
 */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 .visuallyHidden {
   display: none;
 }
 
-@media (max-width: 1600px) {
-  #board .row .tile {
-    height: 90px !important;
-    font-size: 18px;
-  }
-
-  #content {
-    width: 1300px !important;
-  }
-
-  #space {
-    width: 0px !important;
-  }
-}
-
-@media (max-width: 1100px) {
-  #app {
-    width: 950px !important;
-  }
-  #content {
-    width: 950px !important;
-  }
-
-  #left {
-    position: relative;
-    width: 950px !important;
-  }
-
-  #players {
-    width: 48% !important;
-    margin-right: 2% !important;
-    float: left;
-  }
-
-  #card-packs {
-    width: 48% !important;
-    margin-left: 2% !important;
-    float: left;
-  }
-
-  #space {
-    width: 0px !important;
-  }
-}
-
-@media (max-width: 640px) {
-  #app {
-    display: flex !important;
-    flex-direction: column;
-    clear: left;
-    float: none !important;
-    width: auto !important;
-  }
-
-  #title {
-    text-align: left !important;
-    padding: 20px !important;
-  }
-
-  #content {
-    position: static !important;
-    transform: none !important;
-    width: auto !important;
-  }
-
-  #left {
-    float: none !important;
-    margin: 40px 20px 0 !important;
-    width: auto !important;
-  }
-
-  #players {
-    width: auto !important;
-    margin: 0 0 20px !important;
-    float: none !important;
-  }
-
-  #card-packs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: auto !important;
-    margin: 0 !important;
-    float: none !important;
-  }
-
-  #card-packs h2 {
-    align-self: baseline;
-    text-align: left !important;
-    width: 50%;
-  }
-
-  #card-packs p {
-    align-self: baseline;
-    text-align: right;
-    width: 50%;
-  }
-
-  #card-packs button {
-    width: 45% !important;
-    margin: 0 0 10px !important;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  #info {
-    margin: 50px 0 0 !important;
-  }
-
-  #info #score {
-    font-size: 20px !important;
-    padding: 0 0 0 20px !important;
-  }
-
-  #info #turn {
-    float: none !important;
-    font-size: 20px !important;
-    text-align: right !important;
-    margin-right: 110px !important;
-    width: auto !important;
-  }
-
-  #info #end-turn {
-    top: 0 !important;
-    bottom: auto !important;
-    width: auto !important;
-    right: 20px !important;
-  }
-
-  #board {
-    overflow: hidden;
-  }
-
-  #board .row .tile {
-    font-size: 14px !important;
-    line-height: 1.5;
-    hyphens: auto;
-    word-wrap: break-word;
-    vertical-align: top;
-    height: 70px !important;
-  }
-
-  #toggles {
-    padding-left: 20px;
-    order: -1;
-    width: auto !important;
-  }
-
-  #toggles .toggle:not(#player-difficulty) {
-    float: none !important;
-    display: inline-block !important;
-    width: auto !important;
-  }
-
-  #toggles .toggle:not(last-of-type) {
-    margin-right: 10px;
-  }
-
-  #toggles .toggle button {
-    font-size: 14px !important;
-    width: auto !important;
-  }
-
-  #toggles #new-game {
-    margin-top: 20px !important;
-    float: none !important;
-    width: auto !important;
-  }
-
-  #space {
-    width: 0px !important;
-  }
-
-  #leave-room {
-    right: 20px !important;
-    margin-top: 70px !important;
-  }
-
-  #server-message,
-  #afk-window,
-  #join-game {
-    max-width: 90%;
-  }
-}
-
 #app {
   position: relative;
   display: block;
-  float: left;
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
 }
 
 #info {
@@ -216,14 +39,18 @@ Grey: #D6D2C9
 
 body {
   margin: 0;
-  background: #323032;
-  color: #323032;
-  font-family: "Changa", sans-serif;
+  background: #1c0026;
+  color: #111;
+  font-family: "Special Elite", "Changa", sans-serif;
 }
 
 * {
   transition: 0.1s ease-in-out;
   z-index: 1;
+}
+
+.center {
+  text-align: center;
 }
 
 .above {
@@ -235,19 +62,19 @@ body {
   right: 0;
   margin-right: 20px;
   margin-top: 20px;
-  border: 2px solid #f8fdff;
-  background: #323032;
-  color: #f8fdff;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
   font-size: 16px;
 }
 
 #about-button.open {
   color: #323032;
-  background: #f8fdff;
+  background: #fff;
 }
 
 #about-button:hover {
-  background: #686c6d;
+  background: rgb(255, 255, 255, 0.2);
 }
 
 #about-window {
@@ -255,10 +82,11 @@ body {
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
-  background: #f8fdff;
+  background: #fff;
   top: 20px;
-  border-radius: 10px;
+  border-radius: 16px;
   margin-bottom: 200px;
+  max-width: 1024px;
 }
 
 #about-window ul {
@@ -267,6 +95,9 @@ body {
   padding: 50px;
   padding-top: 0;
   margin-top: 0;
+}
+#about-window li {
+  margin-bottom: 8px;
 }
 
 #about-window h2 {
@@ -278,11 +109,9 @@ body {
 }
 
 #about-window a {
-  display: block;
   width: 300px;
   margin: 0 auto;
   text-align: center;
-  text-decoration: none;
   color: #323032;
 }
 
@@ -294,11 +123,11 @@ body {
   position: fixed;
   display: none;
   width: 400px;
-  background: #f8fdff;
+  background: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -100%);
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 #server-message h3 {
@@ -315,7 +144,7 @@ body {
   width: 96%;
   font-size: 16px;
   background: #686c6d;
-  color: #f8fdff;
+  color: #fff;
 }
 
 #server-message button:hover {
@@ -326,11 +155,11 @@ body {
   position: fixed;
   display: none;
   width: 400px;
-  background: #f8fdff;
+  background: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -100%);
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 #afk-window h3 {
@@ -347,7 +176,7 @@ body {
   width: 96%;
   font-size: 16px;
   background: #686c6d;
-  color: #f8fdff;
+  color: #fff;
 }
 
 #afk-window button:hover {
@@ -365,46 +194,63 @@ body {
 
 #join-game {
   position: absolute;
-  width: 400px;
-  background: #f8fdff;
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 #join-game h1 {
-  color: #323032;
+  color: #111;
   font-size: 32px;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   text-align: center;
 }
 
+#join-game .join-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 12px;
+}
+
 #join-game .join-input {
-  position: relative;
-  display: block;
-  width: 275px;
-  margin: 0 auto;
+  display: flex;
+  margin-bottom: 16px;
+  flex-direction: column;
   text-align: left;
+  width: 100%;
+}
+#join-game .join-input:last-child {
+  margin-bottom: 0;
 }
 
 #join-game .join-input input {
-  float: right;
-  line-height: 18px;
+  border: 1px solid #1c0026;
+  border-radius: 8px;
+  font-size: 100%;
+  padding: 8px;
+}
+#join-game .join-input label {
+  padding-bottom: 4px;
+}
+
+#join-game .join-buttons {
+  display: flex;
+  margin: 28px 0 12px;
 }
 
 #join-game button {
-  position: relative;
-  margin: 1%;
-  border-radius: 3px;
-  border: 2px solid #686c6d;
   box-sizing: border-box;
-  padding: 4px;
-  width: 48%;
   font-size: 16px;
-  background: #686c6d;
-  color: #f8fdff;
+  width: 100%;
+  background: #111;
+  color: #fff;
+  margin: 0 12px;
 }
 
 #join-game #join-enter {
@@ -412,47 +258,48 @@ body {
 }
 
 #join-game #join-enter:hover {
-  background: #b32728;
+  background: #222;
 }
 
 #join-game #join-create:hover {
-  background: #11779f;
+  background: #222;
 }
 
 #join-game #error-message {
-  height: 15px;
   text-align: center;
-  margin-top: 5px;
+  margin: 32px 0 0;
 }
 
 button {
   cursor: pointer;
-  font-family: "Changa", sans-serif;
-  border-radius: 3px !important;
+  font-family: "Special Elite", "Changa", sans-serif;
+  border-radius: 12px;
   border-style: solid;
+  font-size: 16px;
+  padding: 12px 16px;
 }
 
 #leave-room {
   position: absolute;
   margin-left: 20px;
   margin-top: 20px;
-  border: 2px solid #f8fdff;
-  background: #323032;
-  color: #f8fdff;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
   font-size: 16px;
 }
 
 #leave-room:hover {
-  background: #686c6d;
+  background: rgb(255, 255, 255, 0.2);
 }
 
 #title {
   text-align: center;
-  padding: 10px;
+  padding: 16px;
 }
 
 #title h1 {
-  color: #f8fdff;
+  color: #fff;
   font-size: 22px;
   margin: 0;
   padding: 0;
@@ -462,22 +309,20 @@ button {
   font-size: 18px;
   margin: 0;
   padding: 0;
-  color: #f8fdff;
+  color: #fff;
 }
 
 #left {
-  position: relative;
-  width: 200px;
-  margin-right: 50px;
+  width: 100%;
+  max-width: 320px;
+  margin-right: 36px;
   margin-top: 95px;
-  float: left;
 }
 
 #content {
-  position: absolute;
-  width: 1500px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #players {
@@ -487,68 +332,52 @@ button {
 }
 
 #players #panel {
-  position: relative;
-  width: 100%;
-  background: #f8fdff;
-  border: 2px solid #f8fdff;
-  border-radius: 10px;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 16px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 #players h2 {
-  color: #f8fdff;
+  color: #fff;
   text-align: center;
   margin: 0;
 }
 
-#players #panel #join-red {
-  position: relative;
-  width: 46%;
-  margin: 2%;
-  border: 2px solid #b32728;
-  box-sizing: border-box;
-  padding: 4px;
-  float: left;
-  font-size: 16px;
+#players #panel .join-colors-buttons {
+  display: flex;
+}
 
-  color: #f8fdff;
+#players #panel #join-red {
+  color: #fff;
   background: #b32728;
+  margin: 4px;
+  width: 100%;
 }
 
 #players #panel #join-red:hover {
-  background: #323032;
-  color: #b32728;
+  background: #8a1e1e;
 }
 
 #players #panel #join-blue {
-  position: relative;
-  width: 46%;
-  margin: 2%;
-  border: 2px solid #11779f;
-  box-sizing: border-box;
-  padding: 4px;
-  font-size: 16px;
-
-  color: #f8fdff;
+  color: #fff;
   background: #11779f;
+  margin: 4px;
+  width: 100%;
 }
 
 #players #panel #join-blue:hover {
-  background: #323032;
-  color: #11779f;
+  background: #0c5673;
 }
 
 #players #panel #randomize-teams {
+  background: #1c0026;
+  color: #fff;
+  margin: 4px;
   position: relative;
-  width: 96%;
-  margin: 2%;
-  border: 2px solid #686c6d;
-  box-sizing: border-box;
-  padding: 4px;
-  font-size: 16px;
-
-  color: #f8fdff;
-  background: #686c6d;
+  max-width: 100%;
 }
 
 #players #panel #randomize-teams:hover {
@@ -590,14 +419,14 @@ button {
 }
 
 #card-packs h2 {
-  color: #f8fdff;
+  color: #fff;
   text-align: center;
   margin: 0;
   line-height: 20px;
 }
 
 #card-packs p {
-  color: #f8fdff;
+  color: #fff;
   text-align: center;
   margin: 0;
   margin-bottom: 20px;
@@ -607,15 +436,15 @@ button {
   width: 100%;
   margin: 0;
   margin-bottom: 20px;
-  border: 2px solid #f8fdff;
-  color: #f8fdff;
+  border: 2px solid #fff;
+  color: #fff;
   background: #323032;
   font-size: 16px;
   box-sizing: border-box;
 }
 
 #card-packs button.enabled {
-  background: #f8fdff;
+  background: #fff;
   color: #323032;
   font-weight: bold;
 }
@@ -630,15 +459,10 @@ button {
 }
 
 #controls label {
-  color: #f8fdff;
+  color: #fff;
 }
 
 #controls input {
   width: 100%;
   margin: 0;
-}
-
-#space {
-  position: relative;
-  width: 250px;
 }
